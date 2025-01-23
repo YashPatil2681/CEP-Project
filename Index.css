@@ -1,0 +1,41 @@
+html{
+    background-color: rgb(224, 212, 235);
+    
+}
+
+h1{
+    text-decoration: underline black;
+    color: red;
+    text-align: center;
+}
+
+pre{
+    text-align: justify;
+}
+
+div{
+    height: 50px;
+    width: 50px;
+    
+}
+
+#id1{
+    background-image: url('facebook_download.png');
+    background-size: cover;
+    position:fixed;
+    left: 90px;
+}
+
+#id2{
+    background-image: url('insta_download.jpg');
+    background-size: cover;
+    position: fixed;
+    left: 150px;
+}
+
+#id3{
+    background-image: url('yt_download.jpg');
+    background-size: cover;
+    position: fixed;
+    left: 210px;
+}
