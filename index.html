@@ -3,51 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Affordable Student Housing Solutions - Connecting students with budget-friendly, comfortable housing near colleges.">
+    <meta name="description" content="Affordable Student Housing Solutions - Budget-friendly housing options near colleges with transparent pricing.">
     <title>About Us | Affordable Student Housing</title>
     <link rel="stylesheet" href="index.css">
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showPage('AboutUs');
+        });
+    </script>
 </head>
 <body>
-    <header>
-        <h1>About Us</h1>
-        <hr>
-    </header>
+    <div class="AboutUs">
+        <header>
+            <button class="hamburger" id="hamburger-icon" aria-label="Open navigation menu" onclick="openNavbar()">
+                ☰
+            </button>
+            <div class="logo">
+                <img src="logo.png" alt="Affordable Student Housing Logo">
+            </div>
+            <nav id="nav-menu">
+                <ul>
+                    <!-- <li><a href="#" onclick="showPage('Home')">Home</a></li> -->
+                    <li><a href="#" onclick="showPage('AboutUs')">ABOUT US</a></li>
+                    <li><a href="#" onclick="showPage('ContactUs')">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section>
-            <h2>Welcome to Affordable Student Housing Solutions</h2>
-            <p>
-                At Affordable Student Housing Solutions, we are dedicated to helping students find budget-friendly, 
-                comfortable, and conveniently located accommodations near their colleges. Our mission is to make 
-                the housing search process seamless and stress-free, allowing you to focus on your studies and 
-                enjoy your student life to the fullest.
-            </p>
-            <p>
-                We specialize in connecting students with trusted landlords and providing transparent pricing, 
-                ensuring that every student can access safe and affordable housing. Our commitment is to offer 
-                practical housing solutions that meet your financial and personal needs, empowering you to thrive 
-                during your academic journey.
-            </p>
-            <p>
-                Whether you're a first-year student or nearing graduation, our resources and expertise ensure you’ll 
-                find a place to call home without financial strain. Let us guide you on your journey to securing the 
-                perfect housing option with ease and confidence.
-            </p>
-        </section>
+        <main>
+            <!-- <section id="Home" style="display:none;">
+                <header>
+                    <h1>HOME</h1>
+                </header>
+                <p>Welcome to Affordable Student Housing Solutions.</p>
+            </section> -->
 
-        <section>
-            <h2>Our Location</h2>
-            <address>
-                MQ37+M3C, Nigdi Marg, Near Akurdi Railway Station Road,<br>
-                Sector No. 26, Pradhikaran, Nigdi,<br>
-                Pimpri-Chinchwad, Maharashtra 411044
-            </address>
-        </section>
-    </main>
+            <section id="AboutUs">
+                <header>
+                    <h1>ABOUT US</h1>
+                </header>
+                <h2>Welcome to Affordable Student Housing Solutions</h2>
+                <p>
+                    At Affordable Student Housing Solutions, we help students find budget-friendly, 
+                    comfortable, and conveniently located accommodations near their colleges. 
+                    Our mission is to make the housing search process seamless and stress-free.
+                </p>
+                <p>
+                    We connect students with trusted landlords, provide transparent pricing, 
+                    and ensure every student can access safe and affordable housing.
+                </p>
+                <p>
+                    Whether you're a first-year student or nearing graduation, our resources 
+                    ensure you'll find a place to call home without financial strain.
+                </p>
+                <h2>Our Location</h2>
+                <address>
+                    <p>MQ37+M3C, Nigdi Marg, Near Akurdi Railway Station Road,</p>
+                    <p>Sector No. 26, Pradhikaran, Nigdi,</p>
+                    <p>Pimpri-Chinchwad, Maharashtra 411044</p>
+                </address>
+            </section>
+
+            <section id="ContactUs" style="display:none;">
+                <h2>Contact Us</h2>
+                <p>You will hear from us at the earliest!</p>
+                <label for="text">Name :- </label>
+                <input type="text" placeholder="Enter your name ">
+                <br>
+                <label for="email">Email :- </label>
+                <input type="email" placeholder="Enter your email ">
+                <br>
+                <label for="tel">Phone No :- </label>
+                <input type="tel" placeholder="Enter your phone">
+                <br>
+                <br>
+                <textarea placeholder="Any comment or your query"></textarea>
+                <button>Send</button>
+                <p>You can also contact us at 181-1711-322</p>
+            </section>
+        </main>
+    </div>
 
     <footer>
-        <hr>
-        <p>&copy; 2025 Affordable Student Housing Solutions. All rights reserved. Terms and conditions apply.</p>
+        <p>&copy; 2025 Affordable Student Housing Solutions. All rights reserved. <a href="terms.html">Terms and Conditions</a>.</p>
     </footer>
 </body>
 </html>
